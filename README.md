@@ -27,4 +27,11 @@ The example should be loaded into a github repo of the candidate’s choice to a
 - You'll need a valid [golang](https://go.dev/doc/install), [docker](https://docs.docker.com/get-docker/), and [minikube](https://minikube.sigs.k8s.io/docs/start/) installation
     - Following steps assume the docker engine is started
 - `minikube start` (this gives us a valid k8s cluster and updates our ~/.kube/config to talk to it)
+
+# Running
+To run just the base tasks do the following:
 - `go run main.go`
+
+To run the informer demo:
+- `go run informer.go`
+- then either `go run main.go` or `kubectl create namespace informer-test` and watch the output of `informer.go`
